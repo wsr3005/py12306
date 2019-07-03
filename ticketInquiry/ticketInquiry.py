@@ -12,14 +12,7 @@ import check as ch
 import station as sta
 
 class TicketInquiry:
-    # 出发地
-    from_station = 'SHH'
 
-    # 目的地
-    to_station = 'FZS'
-
-    # 出发时间
-    train_date = '2019-07-03'
 
     # 123056列车请求路径
     sturl = 'https://kyfw.12306.cn/otn/leftTicket/query?'

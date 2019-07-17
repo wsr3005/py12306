@@ -19,15 +19,15 @@ for i in station_names:
 # print(station_dict)
 
 
-def get_station_name(station_name):
-    if station_name in station_dict_1:
-        return station_dict_1[station_name]
+def get_station_name(station):
+    if station in station_dict_1:
+        return station_dict_1[station]
     return "站点名错误"
 
 
-def set_station_name(station):
-    if station in station_dict_2:
-        return station_dict_2[station]
+def set_station_name(station_name):
+    if station_name in station_dict_2:
+        return station_dict_2[station_name]
     return "站点代码错误"
 
 # print(get_station('BOP'))

@@ -8,12 +8,13 @@
 import ticketInquiry as ti
 import station as sta
 # 出发地
-from_station = sta.set_station_name('北京')
-
+#_from = input("请输入始发站：")
+from_station = sta.set_station_name(input("请输入始发站："))
 # 目的地
-to_station = sta.set_station_name('武汉')
+#_to = input("请输入到达站：")
+to_station = sta.set_station_name(input("请输入到达站："))
 
 # 出发时间
-train_date = '2019-07-03'
+train_date = input("请输入出发日期(XX-XX—XX)：")
 search = ti.TicketInquiry(train_date,from_station,to_station)
 print(search.print_ticket())

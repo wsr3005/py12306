@@ -16,5 +16,5 @@ to_station = sta.set_station_name(input("请输入到达站："))
 
 # 出发时间
 train_date = input("请输入出发日期(XX-XX—XX)：")
-search = ti.TicketInquiry(train_date,from_station,to_station)
+search = ti.TicketInquiry(train_date, from_station, to_station)
 print(search.print_ticket())

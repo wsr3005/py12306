@@ -1,6 +1,7 @@
 import requests
 from PIL import Image
 from json import loads
+from urllib import parse
 import urllib3
 urllib3.disable_warnings()
 
@@ -20,7 +21,7 @@ class Login(object):
         try:
             img = Image.open('img.jpg')
             img.show()
-            img.close() 
+            img.close()
         except IOError:
             print("请输入验证码")
         else:
@@ -41,7 +42,7 @@ class Login(object):
 
     def captcha_check(self, captcha_answer):
         captcha_check_url = 'https://kyfw.12306.cn/passport/captcha/captcha-check?&rand=sjrand&answer=' \
-                            + captcha_answer.unicode()
+                            + parse.quote(captcha_answer)
         captcha_result = self.session.get(captcha_check_url, headers=self.headers, verify=False)
         captcha_dic = loads(captcha_result.content.decode())
         captcha_code = captcha_dic['result_code']
@@ -58,11 +59,11 @@ class Login(object):
         data = {
             'username': username,
             'password': password,
-            'appid': 'excater',
+            'appid': 'otn',
             'answer': captcha_answer
         }
-        login_result = self.session.post(url=login_url, data=data, headers=self.headers, verify=False)
-        login_dic = loads(login_result.content.decode())
+        login_result = self.session.post(url=login_url, data=data, headers=self.headers, verify=False).json()
+        login_dic = loads(login_result.content.decode('ISO-8859-1'))
         login_msg = login_dic['result_message']
         # 结果的编码方式是Unicode编码，所以对比的时候字符串前面加u,或者mes.encode('utf-8') == '登录成功'进行判断，否则报错
         if login_msg.encode('utf-8') == '登录成功':
@@ -80,6 +81,6 @@ if __name__ == '__main__':
     while not check:
         check = login.captcha_check(ca)
         if check:
-            print('验证通过!')
+            login.login(ca)
         else:
             print('验证失败，请重新验证!')

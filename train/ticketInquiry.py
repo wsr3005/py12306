@@ -3,7 +3,7 @@
 # @Time : 19-7-3 上午10:19 
 # @Author : Yuqiao
 # @Site :  
-# @File : ticketInquiry.py 
+# @File : train.py
 # @Software: PyCharm
 import requests
 import datetime

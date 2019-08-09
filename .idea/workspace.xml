@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="466c32b9-0686-4bc9-97e8-7fa9340f3c3e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/login/captcha.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/login/captcha.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/conf/CityCode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/conf/Constant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/conf/Url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/conf/UserAgent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/utils/Utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/utils/net/NetUtils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/sms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/captcha.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/train/login/captcha.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/login/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketInquiry/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketInquiry/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketInquiry/station.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/station.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketInquiry/ticketInquiry.py" beforeDir="false" afterPath="$PROJECT_DIR$/train/ticketInquiry.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,72 +34,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketInquiry/search.py">
+        <entry file="file://$PROJECT_DIR$/train/ticketInquiry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding>
-                <element signature="e#141#167#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1368">
+              <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketInquiry/ticketInquiry.py">
+        <entry file="file://$PROJECT_DIR$/train/station.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="152">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/conf/CityCode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108452">
+              <caret line="5708" selection-start-line="5708" selection-end-line="5708" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/conf/Constant.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1254">
+              <caret line="72" column="24" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="24" />
               <folding>
-                <element signature="e#154#169#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#1490#1669#0" />
+                <element signature="e#1835#2014#0" />
+                <element signature="e#3837#4218#0" />
+                <element signature="e#4714#4825#0" />
+                <element signature="e#4978#5151#0" />
+                <element signature="e#5301#5391#0" />
+                <element signature="e#6157#6416#0" />
+                <element signature="e#6690#6943#0" />
+                <element signature="e#7124#7292#0" />
+                <element signature="e#7478#7675#0" />
+                <element signature="e#7832#8011#0" />
+                <element signature="e#8434#8659#0" />
+                <element signature="e#8815#9039#0" />
+                <element signature="e#9189#9390#0" />
+                <element signature="e#10283#10949#0" />
+                <element signature="e#10963#11175#0" />
+                <element signature="e#11086#11166#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/login/login.py">
+        <entry file="file://$PROJECT_DIR$/framework/utils/net/NetUtils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="647">
+              <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#129#140#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/captcha.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python36/Lib/json/decoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="356" selection-start-line="356" selection-end-line="356" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketInquiry/check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#146#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketInquiry/station.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -110,6 +123,18 @@
         <option value="$PROJECT_DIR$/ticketInquiry/search.py" />
         <option value="$PROJECT_DIR$/ticketInquiry/ticketInquiry.py" />
         <option value="$PROJECT_DIR$/login/login.py" />
+        <option value="$PROJECT_DIR$/train/ticketInquiry.py" />
+        <option value="$PROJECT_DIR$/framework/conf/url.py" />
+        <option value="$PROJECT_DIR$/framework/conf/utils.py" />
+        <option value="$PROJECT_DIR$/framework/conf/constant.py" />
+        <option value="$PROJECT_DIR$/framework/conf/citycode.py" />
+        <option value="$PROJECT_DIR$/framework/conf/UserAgent.py" />
+        <option value="$PROJECT_DIR$/notification/email.py" />
+        <option value="$PROJECT_DIR$/notification/sms.py" />
+        <option value="$PROJECT_DIR$/entrance.py" />
+        <option value="$PROJECT_DIR$/framework/conf/CityCode.py" />
+        <option value="$PROJECT_DIR$/framework/conf/Constant.py" />
+        <option value="$PROJECT_DIR$/framework/utils/net/NetUtils.py" />
       </list>
     </option>
   </component>
@@ -125,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,25 +161,55 @@
             <path>
               <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
               <item name="py12306" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
               <item name="py12306" type="462c0819:PsiDirectoryNode" />
-              <item name="ticketInquiry" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py12306" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py12306" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py12306" type="462c0819:PsiDirectoryNode" />
+              <item name="notification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py12306" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py12306" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python12306" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../12306" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\py12306\framework\utils" />
+      <recent name="E:\project\py12306\train" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -260,21 +316,29 @@
       <workItem from="1563367557920" duration="1247000" />
       <workItem from="1564401162539" duration="9155000" />
       <workItem from="1564466704300" duration="5709000" />
+      <workItem from="1564537688326" duration="613000" />
+      <workItem from="1564627404271" duration="281000" />
+      <workItem from="1564628035742" duration="1203000" />
+      <workItem from="1564707732229" duration="1201000" />
+      <workItem from="1565226201402" duration="1858000" />
+      <workItem from="1565254613947" duration="641000" />
+      <workItem from="1565330791535" duration="4558000" />
+      <workItem from="1565336067438" duration="726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16111000" />
+    <option name="totallyTimeSpent" value="27192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="188" y="80" width="1654" height="929" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27289838" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3030113" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32830188" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38742137" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39748427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -300,7 +364,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/login/login.py</url>
+          <url>file://$PROJECT_DIR$/train/login/login.py</url>
           <line>65</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -315,43 +379,6 @@
     <entry file="file://$USER_HOME$/.virtualenvs/py12306/lib/python3.6/site-packages/urllib3/response.py" />
     <entry file="file:///usr/lib/python3.6/sre_compile.py" />
     <entry file="file:///usr/lib/python3.6/codecs.py" />
-    <entry file="file://$PROJECT_DIR$/ticketInquiry/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="e#141#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketInquiry/ticketInquiry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#154#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketInquiry/check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#146#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketInquiry/station.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/envs/py12306/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -368,20 +395,116 @@
     </entry>
     <entry file="file://C:/Python36/Lib/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="704">
           <caret line="356" selection-start-line="356" selection-end-line="356" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/captcha.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/login.py">
+    <entry file="file://$PROJECT_DIR$/train/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="342">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#141#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/login/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/login/captcha.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#146#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/utils/Utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/conf/UserAgent.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification/email.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification/sms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entrance.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/conf/Url.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/ticketInquiry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train/station.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/conf/CityCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108452">
+          <caret line="5708" selection-start-line="5708" selection-end-line="5708" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/conf/Constant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="72" column="24" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#1490#1669#0" />
+            <element signature="e#1835#2014#0" />
+            <element signature="e#3837#4218#0" />
+            <element signature="e#4714#4825#0" />
+            <element signature="e#4978#5151#0" />
+            <element signature="e#5301#5391#0" />
+            <element signature="e#6157#6416#0" />
+            <element signature="e#6690#6943#0" />
+            <element signature="e#7124#7292#0" />
+            <element signature="e#7478#7675#0" />
+            <element signature="e#7832#8011#0" />
+            <element signature="e#8434#8659#0" />
+            <element signature="e#8815#9039#0" />
+            <element signature="e#9189#9390#0" />
+            <element signature="e#10283#10949#0" />
+            <element signature="e#10963#11175#0" />
+            <element signature="e#11086#11166#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/utils/net/NetUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding>
+            <element signature="e#129#140#0" expanded="true" />
           </folding>
         </state>
       </provider>

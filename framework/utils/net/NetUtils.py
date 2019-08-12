@@ -4,9 +4,14 @@
 # @Site    : 
 # @File    : NetUtils.py
 # @Software: PyCharm
+import random
 import time
+from http import cookiejar
 
 import requests
+
+from framework.conf.UserAgent import USER_AGENT
+
 
 def sendLogic(func):
     def wrapper(*args,**kwargs):
@@ -50,3 +55,36 @@ class EasyHttp(object):
     @staticmethod
     def get_session():
         return EasyHttp._session
+    
+    @staticmethod
+    def set_cookie(cookie_path):
+        new_cookiejar = cookiejar.LWPCookieJar()
+        requests.utils.cookiejar_from_dict({c.name: c.value for c in EasyHttp._session.cookies}, new_cookiejar)
+        new_cookiejar.save(cookie_path, ignore_discard=True, ignore_expires=True)
+    
+    @staticmethod
+    def load_cookie(cookie_path):
+        load_cookiejar = cookiejar.LWPCookieJar()
+        load_cookiejar.load(cookie_path, ignore_discard=True, ignore_expires=True)
+        load_cookies = requests.utils.dict_from_cookiejar(load_cookiejar)
+        EasyHttp._session.cookies =requests.utils.cookiejar_from_dict(load_cookies)
+        
+    @staticmethod
+    def set_cookies(**kwargs):
+        for k, v in kwargs.items():
+            EasyHttp._session.cookies.set(k, v)
+            
+    @staticmethod
+    def remove_cookies(key=None):
+        EasyHttp._session.cookies.set(key, None) if key else EasyHttp._session.cookies.clear()
+        
+    @staticmethod
+    def update_headers(headers):
+        EasyHttp._session.headers.update(headers)
+        
+    @staticmethod
+    def reset_headers():
+        EasyHttp._session.headers.clear()
+        EasyHttp._session.headers.update({
+            'User-Agent': random.choice(USER_AGENT)
+        })

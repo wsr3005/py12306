@@ -8,8 +8,8 @@
 import requests
 import datetime
 import prettytable as pt
-import check as ch
-import station as sta
+import train.check as ch
+import train.station as sta
 
 class TicketInquiry:
 

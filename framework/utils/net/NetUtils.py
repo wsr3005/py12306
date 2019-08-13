@@ -31,6 +31,9 @@ class EasyHttp(object):
     @staticmethod
     @sendLogic
     def send(url, params=None, data=None, **kwargs):
+        EasyHttp.reset_headers()
+        if 'headers' in url and url['headers']:
+            EasyHttp.update_headers(url['headers'])
         try:
             response = EasyHttp._session.request(method=url['method'],
                                                  url=url['url'],

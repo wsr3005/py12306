@@ -69,6 +69,7 @@ class Login(object):
         
         results, msg =  is_login_success(response)
         if not results:
+            Log.error(msg)
             return False, msg
         result, msg, apptk = self._uamtk()
         if not Utils.check(results,msg):

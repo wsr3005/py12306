@@ -82,4 +82,4 @@ class Captcha(object):
                 img.close()
         coor = self.index2coor(results)
         Log.verify('验证码坐标：%s' % coor)
-        return results, self.captcha_check(coor)
+        return coor, self.captcha_check(coor)

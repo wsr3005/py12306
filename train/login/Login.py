@@ -1,86 +1,83 @@
-import requests
-from PIL import Image
-from json import loads
-from urllib import parse
-import urllib3
-urllib3.disable_warnings()
+# -*- coding: utf-8 -*-
+# @Time    : 2019/8/13 19:30
+# @Author  : wsr
+# @Site    :
+# @File    : Login.py
+# @Software: PyCharm
+import time
+from collections import OrderedDict
 
+from framework.conf.Constant import TYPE_LOGIN_N
+from framework.conf.Url import loginUrls
+from framework.utils import Utils
+from framework.utils.log.Log import Log
+from framework.utils.net.NetUtils import EasyHttp
+from train.captcha.Captcha import Captcha
+
+
+def login_logic(func):
+    def wrapper(*args, **kwargs):
+        pass
+    return wrapper
 
 class Login(object):
-    def __init__(self):
-        self.headers = {
-            'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
-        }
-        self.session = requests.session()
+    def _uamtk(self):
+        """
 
-    def get_img(self):
-        url = 'https://kyfw.12306.cn/passport/captcha/captcha-image?login_site=E&module=login&rand=sjrand'
-        response = self.session.get(url, headers=self.headers, verify=False)
-        with open('captcha.jpg', 'wb') as f:
-            f.write(response.content)
-        try:
-            img = Image.open('img.jpg')
-            img.show()
-            img.close()
-        except IOError:
-            print("请输入验证码")
-        else:
-            print("请输入验证码")
+        :return: 权限token获取情况，0表示成功；message为验证通过；newapptk为uamauthclient所需要post的值
+        """
+        json_ret = EasyHttp.send(self._url_info['uamtk'], data={'appid': 'otn'})
+        
+        def is_success(response):
+            return response['result_code'] == 0 if response and 'result_code' in response else False
+        
+        return is_success(json_ret), \
+               json_ret['message'] if json_ret and 'message' in json_ret else 'no result_message', \
+               json_ret['newapptk'] if json_ret and 'newapptk' in json_ret else 'no newapptk'
+        
+    def _uamauthclient(self, apptk):
+        """
 
-
-        captcha_solution = input("请输入验证码位置，以','分割:")
-        return captcha_solution
-
-    def captcha_answer(self, captcha_solution):
-        solution = ['35,35', '105,35', '175,35', '245,35', '35,105', '105,105', '175,105', '245,105']
-        ans_list = captcha_solution.split(',')
-        captcha_list = []
-        for i in ans_list:
-            captcha_list.append(solution[int(i)])
-        captcha_answer = ','.join(captcha_list)
-        return captcha_answer
-
-    def captcha_check(self, captcha_answer):
-        captcha_check_url = 'https://kyfw.12306.cn/passport/captcha/captcha-check?&rand=sjrand&answer=' \
-                            + parse.quote(captcha_answer)
-        captcha_result = self.session.get(captcha_check_url, headers=self.headers, verify=False)
-        captcha_dic = loads(captcha_result.content.decode())
-        captcha_code = captcha_dic['result_code']
-        # 取出验证结果:4：成功 5：验证失败 7：过期 8：信息为空
-        if str(captcha_code) == '4':
-            return True
-        else:
-            return False
-
-    def login(self, captcha_answer):
-        username = 'wyq3005'
-        password = 'Mm123456'
-        login_url = "https://kyfw.12306.cn/passport/web/login"
-        data = {
-            'username': username,
-            'password': password,
-            'appid': 'otn',
-            'answer': captcha_answer
-        }
-        login_result = self.session.post(url=login_url, data=data, headers=self.headers, verify=False).json()
-        login_dic = loads(login_result.content.decode('ISO-8859-1'))
-        login_msg = login_dic['result_message']
-        # 结果的编码方式是Unicode编码，所以对比的时候字符串前面加u,或者mes.encode('utf-8') == '登录成功'进行判断，否则报错
-        if login_msg.encode('utf-8') == '登录成功':
-            print('恭喜你，登录成功，可以购票!')
-        else:
-            print('对不起，登录失败')
-
-
-if __name__ == '__main__':
+        :param apptk: _uamtk返回值
+        :return: 权限获取情况，0表示成功；xxx验证通过
+        """
+        json_ret = EasyHttp.send(self._url_info['uamauthclient'], data={'tk': apptk})
+        
+        def is_success(response):
+            return response['result_code'] == 0 if response and 'result_code' in response else False
+        
+        return is_success(json_ret), \
+               '%s:%s' % (json_ret['username'],
+                          json_ret['result_message']) if json_ret else 'uamauthclient failed'
+    
+    def _login_normal(self, username, password, type=TYPE_LOGIN_N):
+        results, verify = Captcha().verify_manually(type)
+        if not verify:
+            return False, '验证码输入有误'
+        Log.verify("验证码识别成功")
+        data = OrderedDict()
+        data['username'] = username
+        data['password'] = password
+        data['appid'] = 'otn'
+        data['answer'] = results
+        self._url_info = loginUrls['normal']
+        response = EasyHttp.post(self._url_info['login'], data=data)
+        
+        def is_login_success(res_json):
+            return 0 == res_json['result_code'] if res_json and 'result_code' in res_json else False, \
+                   res_json['result_message'] if 'result_message' in res_json else '登陆失败'
+        
+        results, msg =  is_login_success(response)
+        if not results:
+            return False, msg
+        result, msg, apptk = self._uamtk()
+        if not Utils.check(results,msg):
+            return False, 'uamtk failed'
+        return self._uamauthclient(apptk)
+        
+        
+if __name__ == "__main__":
     login = Login()
-    cs = login.get_img()
-    ca = login.captcha_answer(cs)
-    check = False
-    # 只有验证成功后才能执行登录操作
-    while not check:
-        check = login.captcha_check(ca)
-        if check:
-            login.login(ca)
-        else:
-            print('验证失败，请重新验证!')
+    login._login_normal('wyq3005', 'Mm123456')
+    time.sleep(3)
+    pass

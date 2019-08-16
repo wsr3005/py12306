@@ -154,4 +154,4 @@ class Query:
         print(tb)
             
 if __name__ == "__main__":
-    Query.output('2019-08-15', '沙坪坝', '兰州', 'ADULT')
+    Query.output('2019-08-15', '武汉', '北京', 'ADULT')

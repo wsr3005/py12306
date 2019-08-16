@@ -13,7 +13,7 @@ import requests
 from framework.conf.UserAgent import USER_AGENT
 
 
-def sendLogic(func):
+def send_logic(func):
     def wrapper(*args,**kwargs):
         for count in range(5):
             response = func(*args,**kwargs)
@@ -29,7 +29,7 @@ class EasyHttp(object):
     _session = requests.Session()
 
     @staticmethod
-    @sendLogic
+    @send_logic
     def send(url, params=None, data=None, **kwargs):
         EasyHttp.reset_headers()
         if 'headers' in url and url['headers']:
@@ -54,6 +54,23 @@ class EasyHttp(object):
         except:
             pass
         return None
+    
+    @staticmethod
+    @send_logic
+    def post(url , data=None):
+        EasyHttp.reset_headers()
+        if 'headers' in url and url['headers']:
+            EasyHttp.update_headers(url['headers'])
+        try:
+            response = EasyHttp._session.request(method=url['method'],
+                                                 url=url['url'],
+                                                 data=data,
+                                                 timeout=10,
+                                                 allow_redirects=False)
+        except Exception as e:
+            return None
+        return response
+        
 
     @staticmethod
     def get_session():
